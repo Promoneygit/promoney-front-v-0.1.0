@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Selectre from './pages/Selectre';
+import Otp from './pages/Otp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className='container'>
+          <Routes>
+            <Route exact path="/" element={
+              <div>
+                <header className="App-header">
+                  <img src={logo} className="App-logo" alt="logo" />
+                  <button ><Link to='/Selectre'>Register</Link></button>
+                </header>
+              </div>
+            } />
+            <Route path='/Selectre' element={<Selectre />} />
+            <Route path='/Otp' element={<Otp />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
