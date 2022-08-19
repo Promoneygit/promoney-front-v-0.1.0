@@ -1,52 +1,44 @@
-import React, { Component } from "react";
-import OtpInput from "react-otp-input";
+import OTPInput, { ResendOTP } from "otp-input-react";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-export default class App extends Component {
-  state = { otp: "" };
 
-  handleChange = otp => this.setState({ otp });
+function Otp() {
+          const [OTP, setOTP] = useState("");
+          const renderButton = (buttonProps) => {
+                    return (
+                              <button {...buttonProps}>
+                                        {buttonProps.remainingTime !== 0 ? `ไม่ได้รับ OTP ขอรหัสใหม่ใน ${buttonProps.remainingTime} วินาที` : "ขอรหัส OTP อีกครั้ง"}
+                              </button>
+                    );
+          };
+          const renderTime = () => React.Fragment;
+          return (
+                    <div className="Background">
+                              <div className="selectre">
+                                        กรอกรหัส OTP
+                                        <ul />
+                                        <div>
+                                                  รหัส OTP ถูกส่งไปที่
+                                        </div>
+                                        <div>
+                                                  081-234-5678
+                                        </div>
+                                        <div>
+                                                  Ref : (GGCL)
+                                        </div>
+                                        <ul />
+                                        <OTPInput value={OTP} onChange={setOTP} autoFocus OTPLength={6} otpType="number" disabled={false} />
+                                        <ul />
+                                        <ResendOTP renderButton={renderButton} renderTime={renderTime} />
+                                        
+                                        <Link to='/Registerfront'><button class="button-next" >ดำเนินการต่อ</button></Link>
 
-  render() {
-    return (
-      <OtpInput
-        value={this.state.otp}
-        onChange={this.handleChange}
-        numInputs={6}
-        separator={<span>-</span>}
-      />
-    );
-  }
+                              </div>
+                    </div>
+
+          );
 }
 
-// function Otp() {
+export default Otp
 
-//   return (
-
-//     <div className='App'>
-//       <div>
-//           <div className="Selectre">
-//           กรอกรหัส OTP
-          
-//           </div>
-//           <div>
-//             รหัส OTP ถูกส่งไปที่
-//           </div>
-//           <div>
-//             เบอร์
-//           </div>
-//           <div>
-//             Ref
-//           </div>
-
-//           <button class="button-48" role="button">
-//             <span class="text">
-//               {/* <Link to='/'>สมัครบริการโดยการกรอกข้อมูล</Link> */}
-//             </span>
-//           </button>
-        
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Otp

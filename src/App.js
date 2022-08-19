@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Selectre from './pages/Selectre';
 import Otp from './pages/Otp';
+import Registerfront from './pages/Registerfront';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             } />
             <Route path='/Selectre' element={<Selectre />} />
             <Route path='/Otp' element={<Otp />} />
+            <Route path='/Registerfront' element={<Registerfront />} />
           </Routes>
         </div>
       </Router>

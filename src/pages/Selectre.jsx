@@ -1,20 +1,25 @@
-import Otp from './Otp';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import card1 from './img/card1.png';
+import {Link} from 'react-router-dom';
 
 function Selectre() {
   return (
-    <div className="App">
-      <div className='Selectre'>
+    <div className='Background'>
+       <div className='selectre'>
         <div>
           เลือกวิธีการสมัคร
-          <button class="button-48" role="button">
-            <span class="text">
-              <Link to='/Otp'>สมัครบริการโดยการกรอกข้อมูล</Link>
-            </span>
+          
+          <ul>
+          <Link to='/Otp'>
+          <button class="button-48">
+          <img src={card1} alt="card1" />สมัครบริการโดยการกรอกข้อมูล
           </button>
+          </Link>
+          </ul>
+          
         </div>
       </div>
     </div>
+     
   )
 }
 
