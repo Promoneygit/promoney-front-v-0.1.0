@@ -209,3 +209,34 @@ Button.ghost {
 	border-color: #FFFFFF;
 }
 
+.input-line {
+          background: none;
+          margin-bottom: 10px;
+          line-height: 1em;
+          font-weight: 500;
+          color: #323232;
+          font-family: 'Outfit';
+          width: 100%;
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          border-bottom: solid 2px #FFFFFF;
+          outline: none;
+          font-size: 16px;
+        }
+        
+        .full-width {
+          width: 50%;
+          gap: 20px 50px;
+        }
+        .input-line::placeholder {
+          font-family: 'Outfit';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: left;
+
+          color: #FFFFFF;
+      }
+
