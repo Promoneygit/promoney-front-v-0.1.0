@@ -10,7 +10,7 @@ function Registerfront() {
                                                   <h3>ข้อมูลบัตรประชาชน</h3>
                                         </div>
                                         <div class='input-fields '>
-                                                  <input type='text' placeholder='ชื่อ(ภาษาไทย)' class='input-line full-width '></input>
+                                                  <input type='text' placeholder='ชื่อ(ภาษาไทย)' class='input-line  '></input>
                                                   
                                                   <input type='text' placeholder='นามสกุล(ภาษาไทย)' class='input-line full-width'></input>
 
@@ -25,7 +25,7 @@ function Registerfront() {
 
                                         </div>
 
-                                        <Link to='/otp'><button class="button-next" >ดำเนินการต่อ</button></Link>
+                                        <Link to='/Registeruploadphoto'><button class="button-next" >ดำเนินการต่อ</button></Link>
 
                               </div>
                     </div>

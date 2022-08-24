@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Selectre from './pages/Selectre';
 import Otp from './pages/Otp';
 import Registerfront from './pages/Registerfront';
+import Registeruploadphoto from './pages/Registeruploadphoto';
+import React from 'react'
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path='/Selectre' element={<Selectre />} />
             <Route path='/Otp' element={<Otp />} />
             <Route path='/Registerfront' element={<Registerfront />} />
+            <Route path='/Registeruploadphoto' element={<Registeruploadphoto />} />
           </Routes>
         </div>
       </Router>
