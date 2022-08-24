@@ -70,7 +70,7 @@
           font-size: 14px;
           font-weight: 600;
           letter-spacing: 0;
-          line-height: 1em;
+          line-height: 2em;
           margin: 0;
           opacity: 1;
           outline: 0;
@@ -240,3 +240,18 @@ Button.ghost {
           color: #FFFFFF;
       }
 
+      .uploadPicturesWrapper div {
+          justify-content: flex-start !important;
+        }
+        
+        .uploadPictureContainer {
+          width: 200px !important;
+          height: auto !important;
+          margin: 2% 5% !important;
+          padding: 10px !important;
+        }
+        
+        .uploadPictureContainer img {
+          height: 200px !important;
+        }
+        
